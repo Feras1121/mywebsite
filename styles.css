@@ -224,3 +224,8 @@ img#ember349.flex-shrink-zero.mr2.evi-image.lazy-image.ember-view {
 div#image-overlay {
   display: inline-block;
 }
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
