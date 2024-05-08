@@ -225,7 +225,6 @@ div#image-overlay {
   display: inline-block;
 }
 .legal {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
   color: #999;
 }
