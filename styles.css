@@ -218,8 +218,6 @@ span {
 }
 img#ember349.flex-shrink-zero.mr2.evi-image.lazy-image.ember-view {
   width: 50px;
-  aspect-ratio: auto 50 / 50;
-  height: 50px;
 }
 div#image-overlay {
   display: inline-block;
