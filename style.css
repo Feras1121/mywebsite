@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(bgf2.jpg);
+  background: url(bgf2.jpg) no-repeat center/cover, #3c016b;
 }
 .box {
   position: relative;
