@@ -10,13 +10,13 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #162052;
+  background: url(bgf2.jpg);
 }
 .box {
   position: relative;
   width: 400px;
   height: 400px;
-  background: rgba(0, 0, 0, 0.5);
+  background: #830dbb;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@ body {
   content: "";
   position: absolute;
   inset: -10px 140px;
-  background: linear-gradient(315deg, #00ccff, #d400d4);
+  background: linear-gradient(315deg, #830dbb, #d400d4);
   transition: 0.5s;
   animation: animate 4s linear infinite;
 }
@@ -44,7 +44,7 @@ body {
   content: "";
   position: absolute;
   inset: 6px;
-  background: #162052;
+  background: #3c016b;
   border-radius: 50%;
   z-index: 1;
 }
