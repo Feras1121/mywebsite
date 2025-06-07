@@ -85,7 +85,7 @@
               <p class="tags">
                   IT Support Officer<br /><span>
                   EFSIM Facilities Management Company |
-                  <span>Mar 2024 - Present (2 years)</span></span>
+                  <span class="work-range" data-range="Mar 2024 - present">Mar 2024 - Present (<span class="duration">Loading...</span>)</span></span>
               </p>
             </li>
             
@@ -95,7 +95,7 @@
               <p class="tags">
                   Marketing<br /><span>
                   Sakani Saudi Ministry of Housing |
-                  <span>May 2020 - Dec 2020 (7 months)</span></span>
+                  <span class="work-range" data-range="May 2020 - Dec 2020">May 2020 - Dec 2020 (<span class="duration">Loading...</span>)</span></span>
               </p>
             </li>
             
@@ -105,7 +105,7 @@
               <p class="tags">
                 Salesperson<br />
                   <span>DAR AL-BAYAN REAL ESTATE |
-                  <span>2017 - 2019 (2 years)</span></span>
+                  <span class="work-range" data-range="Jan 2017 - Jan 2019">2017 - 2019 (<span class="duration">Loading...</span>)</span></span>
               </p>
             </li>
           </ul>
@@ -203,6 +203,46 @@
         </div>
       </div>
     </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const monthMap = {
+      Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+      Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+    };
+
+    function parseDate(str) {
+      if (str.trim().toLowerCase() === 'present') return new Date();
+      const [mon, year] = str.trim().split(" ");
+      return new Date(parseInt(year), monthMap[mon], 1);
+    }
+
+    function calcDuration(fromStr, toStr) {
+      const start = parseDate(fromStr);
+      const end = parseDate(toStr);
+      let years = end.getFullYear() - start.getFullYear();
+      let months = end.getMonth() - start.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const parts = [];
+      if (years > 0) parts.push(`${years} year${years > 1 ? 's' : ''}`);
+      if (months > 0) parts.push(`${months} month${months > 1 ? 's' : ''}`);
+      if (parts.length === 0) parts.push("0 months");
+
+      return parts.join(" ");
+    }
+
+    document.querySelectorAll(".work-range").forEach(el => {
+      const range = el.dataset.range;
+      const [from, to] = range.split(" - ");
+      const duration = calcDuration(from, to);
+      el.querySelector(".duration").textContent = duration;
+    });
+  });
+</script>
   </body>
   <footer>
     <div class="legal">
